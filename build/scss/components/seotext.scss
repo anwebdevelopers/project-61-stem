@@ -1,0 +1,63 @@
+.seotext {
+    padding: 0 0 6rem 0;
+    background-color: $yellow;
+}
+.seotext__box {
+    transform: translateY(-6rem);
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 4rem 1px rgba(0,0,0,.2);
+
+    display: flex;
+    align-items: flex-start;
+}
+.seotext__icon {
+    margin: 0 0 0 3rem;
+    flex: 0 0 auto;
+    width: 12rem;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.seotext__content {
+    flex: 1 1 auto;
+    padding: 4rem 4rem 5rem 6rem;
+    font-weight: 300;
+    p {
+        margin: 1rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .seotext__box {
+        display: block;
+    }
+    .seotext__icon {
+        margin: 0 auto;
+    }
+    .seotext__content {
+        padding: 4rem 3rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

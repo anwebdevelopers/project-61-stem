@@ -1,0 +1,232 @@
+.footer {
+    padding: 4rem 0 6rem 0;
+    background-color: darken($red, 15%);
+    color: rgba(255, 255, 255, .5);
+}
+.footer__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.footer__box-left,
+.footer__box-center,
+.footer__box-right {
+    flex: 0 1 auto;
+}
+.footer__box-left {
+    order: 0;
+}
+.footer__box-center {
+    order: 1;
+}
+.footer__box-right {
+    order: 2;
+}
+.footer__box-left,
+.footer__box-right {
+    width: 25%;
+}
+.footer__box-center {
+    width: 45%;
+    margin: 0 2.5%;
+}
+.footer__box-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__title {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+.footer__contacts {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+.footer__contacts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        margin: 1.5rem 0 0 0;
+        address {
+            font-style: normal;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all .5s ease;
+        	&:hover, &:active {
+        		color: $yellow;
+        	}
+        }
+    }
+}
+.footer__social {
+    margin: 3rem 1rem 0 1rem;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+        margin: 1rem 1rem 0 0;
+        a {
+            text-decoration: none;
+            color: inherit;
+            opacity: .5;
+            filter: grayscale(1);
+            transition: all .5s ease;
+        	&:hover, &:active {
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+.footer__about {
+    flex: 0 0 auto;
+    width: calc(55% - 2rem);
+    margin: 0 1rem;
+}
+.footer__about-text {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.5rem;
+}
+.footer__news {
+    flex: 0 0 auto;
+    width: calc(45% - 2rem);
+    margin: 0 1rem;
+}
+.footer__news-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        margin: 1.5rem 0 0 0;
+        span {
+            display: block;
+            font-size: 1.1rem;
+        }
+        a {
+            color: inherit;
+            display: inline-block;
+            margin: .5rem 0 0 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.4;
+            text-transform: uppercase;
+            transition: all .5s ease;
+        	&:hover, &:active {
+        		color: $yellow;
+        	}
+        }
+    }
+}
+.footer__subscribe {
+    flex: 0 0 auto;
+    width: calc(100% - 2rem);
+    margin: 1.5rem 1rem 0 1rem;
+
+    display: flex;
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        outline: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: .3rem;
+        background-color: #5e1a26;
+        display: block;
+        flex: 1 1 auto;
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        font-family: inherit;
+        color: inherit;
+    }
+    button {
+        @include btn;
+        flex: 0 0 auto;
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        border-radius: .3rem;
+        font-family: inherit;
+        color: #fff;
+        background-color: #2b0008;
+        transition: all .5s ease;
+        &:hover, &:active {
+            background-color: $yellow;
+        }
+    }
+}
+.footer__production {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+.footer__production-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        margin: 1rem 0 0 0;
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all .5s ease;
+        	&:hover, &:active {
+        		color: $yellow;
+        	}
+        }
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .footer__box {
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+    }
+    .footer__box-left,
+    .footer__box-right {
+        width: 50%;
+    }
+    .footer__box-center {
+        width: 100%;
+        margin: 3rem 0 0 0;
+    }
+    .footer__box-left,
+    .footer__box-center,
+    .footer__box-right {
+        order: 0;
+    }
+    .footer__about,
+    .footer__news {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

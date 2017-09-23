@@ -5,7 +5,7 @@ $(function() {
     /*******************************************************/
     //FIRST SCREEN SLIDER
     /*******************************************************/
-    var $headerBanner = $('.header__banner');
+    var $headerBanner = $('.header__slide');
     if ($headerBanner.length > 1) {
         $headerBanner.wrapAll('<div class="header__slider owl-carousel"></div>');
         $('.header__slider').owlCarousel({
