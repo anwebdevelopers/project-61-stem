@@ -1,7 +1,9 @@
 .header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    &.header_fullscreen {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 }
 .header__top {
     flex: 0 1 auto;
@@ -307,7 +309,98 @@
 .fadeOut {
 	animation-name: fadeOut;
 }
+.header__banner {
+    position: relative;
+    width: 100%;
 
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0;
+        padding-bottom: 6%;
+        background-image: url(../img/overlay-banner.png);
+        background-size: 100% 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+}
+.header__banner-breadcrumbs {
+    padding: 1rem 0 0 0;
+    ul {
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       font-size: 1.3rem;
+       li {
+           flex: 0 1 auto;
+           a {
+               text-decoration: none;
+               color: inherit;
+               position: relative;
+               padding: 0 3.5rem 0 0;
+
+               transition: all .5s ease;
+               &:before {
+                   content: '';
+                   position: absolute;
+                   top: 50%;
+                   right: 1.5rem;
+                   transform: translateY(-50%) rotate(-45deg);
+                   width: .5rem;
+                   height: .5rem;
+                   border-right: 1px solid currentColor;
+                   border-bottom: 1px solid currentColor;
+               }
+               &:hover, &:active {
+                   color: $yellow;
+               }
+           }
+       }
+   }
+}
+.header__banner-content {
+    min-height: 45rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.header__banner-date {
+    margin: 0 0 3rem 0;
+    padding: 0 0 1rem 0;
+    font-weight: 300;
+    background-image: linear-gradient(currentColor,currentColor);
+    background-size: 3rem 1px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+.header__banner-title {
+    margin: 0;
+    font-size: 3.4rem;
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header__banner-text {
+    margin: 2rem 0 0 0;
+    font-size: 2.4rem;
+}
+.header__banner-button {
+    margin: 6rem 0 0 0;
+}
 @media only screen and (max-width : 1100px) {
 
 }

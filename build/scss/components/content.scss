@@ -1,0 +1,133 @@
+.content {
+    padding: 6rem 0;
+}
+.share {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: 300;
+    li {
+        flex: 0 1 auto;
+        margin: 0 1rem 0 0;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            background-color: #f5f5f5;
+            border-radius: .3rem;
+            padding: .3rem;
+            text-decoration: none;
+            color: inherit;
+            opacity: .5;
+            filter: grayscale(1);
+            transition: all .5s ease;
+            display: flex;
+            align-items: center;
+            img {
+                width: 1.9rem;
+                height: 1.9rem;
+                margin: 0 .5rem 0 0;
+            }
+        	&:hover, &:active {
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+.content__box {
+    max-width: 84rem;
+    margin: 0 auto;
+    font-weight: 300;
+    blockquote {
+        padding: 5rem 4rem;
+        font-size: 1.6rem;
+        font-style: italic;
+        text-align: center;
+        background-color: #f1f1f1;
+
+        position: relative;
+        &:before,&:after {
+
+            position: absolute;
+            height: 2rem;
+            font-size: 8rem;
+            line-height: .8;
+            opacity: .2;
+            font-style: normal;
+        }
+        &:before {
+            content: '“';
+            left: 2rem;
+            top: 2rem;
+        }
+        &:after {
+            content: '”';
+            right: 2rem;
+            bottom: 2rem;
+        }
+    }
+    > * {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    > * {
+        margin-top: 0;
+        max-width: 100%;
+    }
+    .imagequote {
+        margin: 4rem 0;
+        display: flex;
+        align-items: flex-start;
+        >* {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+        blockquote {
+            margin: 0;
+        }
+    }
+}
+@supports (object-fit: cover) {
+    .content__box {
+        .imagequote {
+            align-items: stretch;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .content__box {
+        .imagequote {
+            display: block;
+            >* {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

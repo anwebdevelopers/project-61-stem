@@ -23,6 +23,58 @@ $(function() {
     }
 
 
+    /*******************************************************/
+    //REVIEWS SLIDER
+    /*******************************************************/
+
+    $('.reviews__box').addClass('owl-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        navText: '',
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 600,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            641: {
+                items: 2
+            }
+        }
+    });
+
+
+    //*****************************************************
+    // Google Map
+    //*****************************************************
+    if(typeof google === 'object' && typeof google.maps === 'object' && $('#map').length) {
+        var markerPosition = new google.maps.LatLng(55.763319, 37.551117);
+
+        function initialize() {
+            var loc, map;
+
+            loc = new google.maps.LatLng(65.020902, 100.094950);
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 3,
+                 center: loc,
+                 mapTypeId: google.maps.MapTypeId.ROADMAP,
+                 scrollwheel: false
+            });
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: markerPosition,
+                visible: true,
+                //icon: 'img/icon-map.png'
+            });
+        }
+        initialize();
+        google.maps.event.addDomListener(window, 'load', initialize);
+    }
+
     //******************************************************************//
     //Chrome Smooth Scroll
     //******************************************************************//
@@ -45,7 +97,7 @@ $(function() {
 
     function fullscreen() {
         if( $('html').hasClass('ie') || $('html').hasClass('gecko') ) {
-            var $header = $('.header');
+            var $header = $('.header_fullscreen');
             $header.removeAttr('style');
             var windowHeight = $(window).height(),
                 headerHeight = $header.height();

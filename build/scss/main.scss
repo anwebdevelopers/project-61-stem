@@ -81,8 +81,18 @@ a {
 	color: #fff;
 	background-color: $red;
 	transition: all .5s ease;
+	border-radius: .2rem;
+	text-align: center;
 	&:hover, &:active {
 		background-color: $yellow;
+	}
+	&.button_yellow {
+		color: #000;
+		background-color: $yellow;
+		&:hover, &:active {
+			color: #fff;
+			background-color: $red;
+		}
 	}
 }
 .title {
@@ -98,7 +108,11 @@ a {
 		background-repeat: no-repeat;
 	}
 }
-
+.subtitle {
+	margin: 3rem 0 0 0;
+	font-weight: 300;
+	text-align: center;
+}
 //Custom Styles Here
 @import "components/header.scss";
 @import "components/catalog.scss";
@@ -107,6 +121,13 @@ a {
 @import "components/counters.scss";
 @import "components/seotext.scss";
 @import "components/footer.scss";
+//dealer
+@import "components/profit.scss";
+@import "components/become.scss";
+@import "components/cooperation.scss";
+@import "components/reviews.scss";
+@import "components/content.scss";
+@import "components/articles.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 

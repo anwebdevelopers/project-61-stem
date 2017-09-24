@@ -4,6 +4,7 @@
     color: rgba(255, 255, 255, .5);
 }
 .footer__box {
+    margin: 0 -1rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -198,7 +199,6 @@
 @media only screen and (max-width : 768px) {
     .footer__box {
         flex-wrap: wrap;
-        margin: 0 -1rem;
     }
     .footer__box-left,
     .footer__box-right {

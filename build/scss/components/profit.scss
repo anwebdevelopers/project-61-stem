@@ -1,0 +1,119 @@
+.profit {
+    padding: 6rem 0;
+}
+.profit__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    column-count: 3;
+    column-gap: 2rem;
+    counter-reset: counter;
+}
+.profit__item {
+    margin: 0 0 3rem 0;
+    break-inside: avoid;
+    padding: 0 0 0 4rem;
+    position: relative;
+    &:before {
+        counter-increment: counter;
+        content: counter(counter);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4rem;
+        overflow: hidden;
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 600;
+        color: $yellow;
+    }
+}
+.profit__item-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+.profit__item-text {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    p, ul {
+        margin: 1.5rem 0 0 0;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        margin: .5rem 0 0 0;
+        position: relative;
+        padding: 0 0 0 2rem;
+        &:before {
+            content: '';
+            position: absolute;
+            top: .8rem;
+            left: 0;
+            width: 1.5rem;
+            height: 1px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+    }
+}
+.profit__map {
+    position: relative;
+
+    margin: 6rem 0 0 0;
+    border-radius: 1rem;
+    border: 1rem solid #f5f5f5;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: -1rem;
+        transform: translateY(100%);
+        height: 0;
+        padding-bottom: 2%;
+        background-image: url(../img/overlay-profit-map.png);
+        background-size: 100% 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+}
+#map {
+    height: 52rem;
+}
+
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .profit__list {
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .profit__list {
+        column-count: auto;
+        column-gap: 0;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}
