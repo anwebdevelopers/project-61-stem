@@ -1,8 +1,8 @@
 .header {
+    display: flex;
+    flex-direction: column;
     &.header_fullscreen {
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
     }
 }
 .header__top {
@@ -107,20 +107,6 @@
 .header__slider {
     flex: 1 1 auto;
     display: flex;
-    &:before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        padding-bottom: 6%;
-        background-image: url(../img/overlay-slide.png);
-        background-size: 100% 100%;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-    }
     &.owl-carousel {
         width: 100%;
         display: flex !important;
@@ -249,7 +235,7 @@
     flex: 0 1 auto;
     width: 100%;
     padding: 18rem 0;
-    background-position: center center;
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -310,31 +296,17 @@
 	animation-name: fadeOut;
 }
 .header__banner {
-    position: relative;
     width: 100%;
 
 
-    background-position: center center;
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    &:before {
-        content: '';
-        position: absolute;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        padding-bottom: 6%;
-        background-image: url(../img/overlay-banner.png);
-        background-size: 100% 100%;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-    }
 }
 .header__banner-breadcrumbs {
-    padding: 1rem 0 0 0;
+    padding: 2rem 0 0 0;
+    opacity: .6;
     ul {
        margin: 0;
        padding: 0;

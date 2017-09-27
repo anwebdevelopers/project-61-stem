@@ -32,6 +32,7 @@
         box-shadow: 0 1rem 4rem 1px rgba(0,0,0,.2);
         .features__item-title {
             background-color: rgba(0,0,0,.6);
+            color: $yellow;
         }
     }
     position: relative;
@@ -41,14 +42,10 @@
 }
 @supports ( display:grid ) and ( not ( display: -ms-grid ) ) {
     .features__box {
-        display: -ms-grid;
         display: grid;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        -ms-grid-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
     }
     .features__item {
-        -ms-grid-column: 1fr;
         width: auto;
         &:nth-child(n+4) {
             min-height: 0;
