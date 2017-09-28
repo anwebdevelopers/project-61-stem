@@ -1,0 +1,176 @@
+.employees {
+    padding: 6rem 0;
+    color: #fff;
+    background-color: #161923;
+}
+.employees__box {
+    margin: 6rem -1rem 0 -1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.owl-carousel {
+        display: block;
+        width: auto;
+        .owl-stage {
+            .owl-item {
+                padding: 0 0 1rem 0;
+                .employees__item {
+                    width: auto;
+                }
+            }
+        }
+        .owl-nav {
+            margin: 3rem 0 0 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .owl-prev,
+            .owl-next {
+                flex: 0 0 auto;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 3rem;
+                height: 3rem;
+                margin: 0 1rem;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border-left: 3px solid currentColor;
+                    border-bottom: 3px solid currentColor;
+                    transition: all .5s ease;
+                }
+                &:hover, &:active {
+                    &:before {
+                        border-color: $yellow;
+                    }
+                }
+            }
+            .owl-prev {
+                &:before {
+                    transform: translate(-30%, -50%) rotate(45deg);
+                }
+            }
+            .owl-next {
+                &:before {
+                    transform: translate(-70%, -50%) rotate(-135deg);
+                }
+            }
+        }
+        .owl-dots {
+            flex: 0 1 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .owl-dot {
+                flex: 0 0 auto;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                margin: 0 .5rem;
+                border: 1px solid #fff;
+                transition: all .5s ease;
+                &.active {
+                   background-color: $yellow;
+                   border-color: $yellow;
+               }
+               &:hover {
+                    border-color: $yellow;
+               }
+            }
+        }
+    }
+}
+.employees__item {
+    flex: 0 0 auto;
+    width: calc(50% - 2rem);
+    margin: 0 1rem 2rem 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+}
+.employees__item-img {
+    flex: 0 0 auto;
+    margin: 0;
+    width: 34%;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: auto;
+    }
+}
+.employees__item-content {
+    flex: 0 0 auto;
+    width: calc(66% - 1rem);
+    margin: 0 0 0 1rem;
+}
+.employees__item-header {
+    padding: 1rem 2rem;
+    background-color: $yellow;
+}
+.employees__item-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+.employees__item-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.employees__item-text {
+    margin: 0;
+    padding: 2rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .employees__box {
+        display: block;
+        margin: 6rem 0 0 0;
+    }
+    .employees__item {
+        width: auto;
+        margin: 2rem 0 0 0;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+    .employees__item {
+        display: block;
+        text-align: center;
+    }
+    .employees__item-img {
+        width: auto;
+    }
+    .employees__item-content {
+        width: auto;
+        margin: 1rem 0 0 0;
+    }
+}

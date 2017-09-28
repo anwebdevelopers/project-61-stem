@@ -1,0 +1,99 @@
+.quote {
+    padding: 6rem 0 10rem 0;
+    background-color: #73716e;
+    background-image: url(../img/bg-quote.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.quote__box {
+    margin: 0 7%;
+    border: .6rem solid $yellow;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 4rem 1px rgba(0,0,0,.5);
+
+    display: flex;
+}
+.quote__img {
+    flex: 0 0 auto;
+    z-index: 1;
+    width: 35%;
+    margin: 11rem 0 -5rem -10%;
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+}
+.quote__text {
+    flex: 0 0 auto;
+    width: 75%;
+    padding: 4rem 6%;
+    font-weight: 300;
+    > * {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    position: relative;
+    &:before,&:after {
+
+        position: absolute;
+        transform: rotate(15deg);
+        height: 8rem;
+        font-size: 24rem;
+        line-height: .8;
+        opacity: .1;
+        font-weight: 600;
+    }
+    &:before {
+        content: '“';
+        left: -8rem;
+        top: 2rem;
+    }
+    &:after {
+        content: '”';
+        right: 0;
+        bottom: 2rem;
+    }
+}
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .quote__box {
+        display: block;
+        margin: 0;
+    }
+    .quote__img {
+        width: auto;
+        margin: 0;
+        // text-align: center;
+    }
+    .quote__text {
+        width: auto;
+        padding: 4rem 6%;
+        &:before {
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

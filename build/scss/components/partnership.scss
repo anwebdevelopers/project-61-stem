@@ -1,0 +1,67 @@
+.partnership {
+    padding: 6rem 0 0 0;
+}
+.partnership__box {
+    margin: 6rem auto 0 auto;
+    max-width: 75rem;
+    display: flex;
+}
+.partnership__img {
+    flex: 0 0 auto;
+    margin: 0;
+    width: 25%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.partnership__content {
+    flex: 0 0 auto;
+    width: 70%;
+    margin: 0 0 0 5%;
+}
+.partnership__text {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.partnership__button {
+    margin: 3rem 0 0 0;
+}
+.partnership__map {
+    margin: 6rem 0 0 0;
+    height: 42rem;
+}
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .partnership__box {
+        display: block;
+        text-align: center;
+    }
+    .partnership__img {
+        width: auto;
+    }
+    .partnership__content {
+        width: auto;
+        margin: 4rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

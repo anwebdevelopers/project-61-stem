@@ -46,6 +46,31 @@ $(function() {
     });
 
     //*****************************************************//
+    //REVIEWS SLIDER
+    //*****************************************************//
+
+    $('.employees__box').addClass('owl-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        navText: '',
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            641: {
+                items: 2
+            }
+        },
+        onInitialized: function() {
+            $('.employees__box .owl-next').before($('.employees__box .owl-dots'));
+        }
+    });
+
+    //*****************************************************//
     //Product Gallery
     //*****************************************************//
 
@@ -60,7 +85,7 @@ $(function() {
         autoplayTimeout: 5000,
         smartSpeed: 500,
         onInitialized: function() {
-            $('.owl-dot').each(function() {
+            $('.product__gallery .owl-dot').each(function() {
                 $(this).html(images[$(this).index()]);
             });
         }
