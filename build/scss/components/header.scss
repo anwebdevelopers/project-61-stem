@@ -396,6 +396,28 @@
     font-size: 2rem;
     letter-spacing: .05em;
 }
+.header__banner-tags {
+    margin: 4rem 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+        flex: 0 0 auto;
+        width: calc(25% - 1rem);
+        margin: 0 .5rem 1rem .5rem;
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding: 1.2rem;
+        color: #000;
+        transition: all .5s ease;
+        border-radius: .2rem;
+        text-align: center;
+        background-color: $yellow;
+    }
+}
 .header__banner-button {
     margin: 6rem 0 0 0;
 }
@@ -453,6 +475,11 @@
     .header__banner-counters-item {
         width: 47%;
     }
+    .header__banner-tags {
+        li {
+            width: calc(33.3333% - 1rem);
+        }
+    }
 }
 
 @media only screen and (max-width : 480px) {
@@ -471,6 +498,11 @@
         font-size: 2.2rem;
 
     }
+    .header__banner-tags {
+        li {
+            width: calc(50% - 1rem);
+        }
+    }
 }
 
 @media only screen and (max-width : 360px) {
@@ -480,5 +512,12 @@
     .header__banner-counters-item {
         width: auto;
         margin: 0 0 6rem 0;
+    }
+    .header__banner-tags {
+        display: block;
+        li {
+            width: auto;
+            margin: 1rem 0 0 0;
+        }
     }
 }

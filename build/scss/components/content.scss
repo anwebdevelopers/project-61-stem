@@ -75,7 +75,7 @@
         max-width: 100%;
     }
     > *:first-child {
-        margin-top: 0;    
+        margin-top: 0;
     }
     .imagequote {
         margin: 4rem 0;
@@ -87,6 +87,25 @@
         }
         blockquote {
             margin: 0;
+        }
+    }
+    .styledtable {
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: #fff;
+        display: block;
+        overflow-x: auto;
+        th, td {
+            padding: 1.5rem 2rem;
+            text-align: left;
+        }
+        th {
+            font-size: 1.8rem;
+            background-color: #ffe88d;
+        }
+        td {
+            font-size: 1.6rem;
+            background-color: #ffefb3;
         }
     }
 }

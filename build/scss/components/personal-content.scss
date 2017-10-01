@@ -1,0 +1,48 @@
+.personal-content {
+    padding: 6rem 0;
+}
+.personal-content__box {
+    display: flex;
+    align-items: center;
+}
+.personal-content__item {
+    flex: 0 0 auto;
+    width: 48%;
+    font-size: 1.6rem;
+    line-height: 1.6;;
+    &:nth-child(even) {
+        margin: 0 0 0 4%;
+    }
+}
+@media only screen and (max-width : 1100px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .personal-content__box {
+        display: block;
+    }
+    .personal-content__item {
+        width: auto;
+        margin: 3rem 0 0 0;
+        &:nth-child(even) {
+            margin: 3rem 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
