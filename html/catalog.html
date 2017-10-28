@@ -55,7 +55,39 @@
 				<nav class="header__menu">
 					<ul>
 						<li><a href="#">Компания</a></li>
-						<li><a href="#">Продукция</a></li>
+						<li>
+							<a href="#">Продукция</a>
+							<div class="header__submenu">
+								<div class="header__submenu-item">
+									<div class="header__submenu-title">Инфракрасная пленка</div>
+									<ul class="header__submenu-list">
+										<li><a href="#">Пленочный теплый пол</a></li>
+										<li><a href="#">Пленка STEM Stand</a></li>
+										<li><a href="#">Пленка STEM Expert</a></li>
+										<li><a href="#">Сухая укладка</a></li>
+										<li><a href="#">Теплый коврик</a></li>
+										<li><a href="#">Сопутствующие товары</a></li>
+									</ul>
+								</div>
+								<div class="header__submenu-item">
+									<div class="header__submenu-title">Инфракрасная пленка</div>
+									<ul class="header__submenu-list">
+										<li><a href="#">Греющий кабель</a></li>
+										<li><a href="#">Нагревательные маты</a></li>
+										<li><a href="#">Саморегулирующийся кабель</a></li>
+										<li><a href="#">Укладка в стяжку</a></li>
+										<li><a href="#">Обогрев труб и водостоков</a></li>
+									</ul>
+								</div>
+								<div class="header__submenu-item">
+									<div class="header__submenu-title">Терморегуляторы</div>
+									<ul class="header__submenu-list">
+										<li><a href="#">Механические</a></li>
+										<li><a href="#">Программируемые</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
 						<li><a href="#">Статьи</a></li>
 						<li><a href="#">Где купить?</a></li>
 					</ul>
@@ -228,44 +260,6 @@
 					</figure>
 					<h3 class="service__item-title">отдел претензий</h3>
 				</a>
-			</dib>
-		</div>
-	</section>
-
-	<section class="calculator">
-		<div class="calculator__container container">
-			<div class="calculator__box">
-				<div class="calculator__content">
-					<h2 class="calculator__title title"><span>Калькулятор теплого  пола</span></h2>
-					<ul class="calculator__list">
-						<li>Составьте схему помещения, намеченного под обогрев. Площадь, намеченная под обогрев «теплыми полами», должна зависеть не только от ваших потребностей, но и от возможностей электропроводки здания. Так что заранее просчитайте нагрузку по электропотреблению, чтобы хватило всем электробытовым приборам.</li>
-						<li>«Вычитайте» из площади укладки места, где будет стоять стационарная мебель и сантехника.</li>
-						<li>Не забудьте предусмотреть отступ как минимум в 10 см от стен и от стационарных систем обогрева.</li>
-					</ul>
-				</div>
-				<form class="calculator__form">
-					<label class="calculator__item">
-						<span>Вид помещения</span>
-						<select>
-							<option>Гостиная</option>
-							<option>Гостиная</option>
-						</select>
-					</label>
-					<label class="calculator__item">
-						<span>Рассчетная площадь укладки</span>
-						<input type="text">
-					</label>
-					<label class="calculator__item">
-						<span>Удельная мощность</span>
-						<select>
-							<option>100 — 150 Вт/м2</option>
-							<option>100 — 150 Вт/м2</option>
-						</select>
-					</label>
-					<label class="calculator__item">
-						<button type="submit" class="button calculator__submit">рассчитать</button>
-					</label>
-				</form>
 			</div>
 		</div>
 	</section>
@@ -273,38 +267,134 @@
 	<section class="calculator">
 		<div class="calculator__container container">
 			<div class="calculator__box">
-				<div class="calculator__content">
-					<h2 class="calculator__title title"><span>Калькулятор теплого  пола</span></h2>
-					<ul class="calculator__list">
-						<li>Составьте схему помещения, намеченного под обогрев. Площадь, намеченная под обогрев «теплыми полами», должна зависеть не только от ваших потребностей, но и от возможностей электропроводки здания. Так что заранее просчитайте нагрузку по электропотреблению, чтобы хватило всем электробытовым приборам.</li>
-						<li>«Вычитайте» из площади укладки места, где будет стоять стационарная мебель и сантехника.</li>
-						<li>Не забудьте предусмотреть отступ как минимум в 10 см от стен и от стационарных систем обогрева.</li>
-					</ul>
-				</div>
-				<div class="calculator__result">
-					<h3 class="calculator__result-title">Вам подойдет</h3>
-					<ul class="calculator__result-list">
-						<li class="calculator__result-item">
-							<div class="calculator__result-name">Греющая секция</div>
-							<div class="calculator__result-value">WFOH/D 1800/20</div>
-						</li>
-						<li class="calculator__result-item">
-							<div class="calculator__result-name">Длина кабеля</div>
-							<div class="calculator__result-value">90 метров</div>
-						</li>
-						<li class="calculator__result-item">
-							<div class="calculator__result-name">Шаг укладки</div>
-							<div class="calculator__result-value">17 см</div>
-						</li>
-					</ul>
-					<div class="calculator__result-buttons">
-						<a href="#callback" class="popup-with-zoom-anim button calculator__result-submit">оформить заявку</a>
-						<a href="#" class="calculator__result-reset">Пересчитать по новой</a>
+				<h2 class="calculator__title title"><span>Калькулятор теплого  пола</span></h2>
+				<p class="calculator__subtitli subtitle">Итак, вы решили сделать в вашей квартире или доме теплый пол, но как правильно выполнить расчет требуемых материалов и выбор необходимых компонентов? Для этого вы можете воспользоваться</p>
+				<form class="calculator__form">
+					<h3 class="calculator__form-title calculator__form-title_align_center">тип укладки</h3>
+					<div class="calculator__form-switch">
+						<label class="calculator__form-switch-item">
+							<input type="radio" name="type" checked>
+							<span>сухая</span>
+						</label>
+						<label class="calculator__form-switch-item">
+							<input type="radio" name="type">
+							<span>в стяжку</span>
+						</label>
+					</div>
+					<div class="calculator__form-box">
+						<div class="calculator__form-type">
+							<div class="calculator__form-type-tab">
+								<h3 class="calculator__form-title">Укладка в стяжку</h3>
+								<label class="calculator__form-type-item">
+									<span class="calculator__form-subtitle">Помещение сложной конфигурации</span>
+									<input type="radio" name="screed" checked class="calculator__form-type-input">
+									<span class="calculator__form-type-label">Сложная укладка</span>
+									<span class="calculator__form-type-illustration">
+										<span class="calculator__form-type-illustration-img">
+											<img src="img/img-calculator1.png" alt="">
+										</span>
+										<span class="calculator__form-type-illustration-text">Для такого типа помещения целесообразно использовать Греющий Кабель</span>
+									</span>
+								</label>
+								<label class="calculator__form-type-item">
+									<span class="calculator__form-subtitle">Помещение с простой конфигурацией</span>
+									<input type="radio" name="screed" class="calculator__form-type-input">
+									<span class="calculator__form-type-label">Простая укладка</span>
+									<span class="calculator__form-type-illustration">
+										<span class="calculator__form-type-illustration-img">
+											<img src="img/img-calculator2.png" alt="">
+										</span>
+										<span class="calculator__form-type-illustration-text">Для такого типа помещения целесообразно использовать Нагревательный Мат</span>
+									</span>
+								</label>
+							</div>
+							<div class="calculator__form-type-tab">
+								<h3 class="calculator__form-title">сухая укладка</h3>
+								<span class="calculator__form-subtitle">Для такой укладки идеально подходит инфракрасная пленка</span>
+								<label class="calculator__form-type-item">
+									<input type="radio" name="dry" checked class="calculator__form-type-input">
+									<span class="calculator__form-type-label">Инфракрасная пленка Стандарт <br>(15 лет гарантии)</span>
+								</label>
+								<label class="calculator__form-type-item">
+									<input type="radio" name="dry" class="calculator__form-type-input">
+									<span class="calculator__form-type-label">Инфракрасная пленка Профи <br>(20 лет гарантии)</span>
+								</label>
+							</div>
+						</div>
+						<div class="calculator__form-area">
+							<h3 class="calculator__form-title">площадь помещения</h3>
+							<span class="calculator__form-subtitle">Кв.м</span>
+							<div class="calculator__form-area-input quantity">
+								<input type="text" value="1">
+							</div>
+						</div>
+					</div>
+					<div class="calculator__submit">
+						<button type="submit" class="button">подобрать рекомендуемый комплект</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="calculator__result">
+				<h3 class="calculator__result-title">оптимальное решение</h3>
+				<div class="calculator__result-box">
+					<figure class="calculator__result-img">
+						<img src="img/img-calculator-result.png" alt="">
+					</figure>
+					<div class="calculator__result-text">
+						<p>4 комплекта: Комплект STEM Standard 150-0,5-10,0 (по 9 903 руб.)</p>
+						<p>1 комплект: Комплект STEM Standard 150-0,5-5,0 (5 223 руб.)</p>
 					</div>
 				</div>
 			</div>
+			<div class="calculator__recommended">
+				<h3 class="calculator__recommended-title">РЕКОМЕНДУЕМЫЙ ТЕРМОРЕГУЛЯТОР</h3>
+				<h3 class="calculator__recommended-subtitle">механический</h3>
+				<div class="calculator__recommended-box">
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Терморегулятор SET-12 <br>(1 431 руб.)</p>
+					</a>
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Терморегулятор SET-12 <br>(1 431 руб.)</p>
+					</a>
+				</div>
+				<h3 class="calculator__recommended-subtitle">механический</h3>
+				<div class="calculator__recommended-box">
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Программируемый  терморегулятор SET-11 <br>(3 354 руб.)</p>
+					</a>
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Программируемый  терморегулятор SET-11 <br>(3 354 руб.)</p>
+					</a>
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Программируемый  терморегулятор SET-11 <br>(3 354 руб.)</p>
+					</a>
+					<a href="#" class="calculator__recommended-item">
+						<figure class="calculator__recommended-item-img">
+							<img src="img/img-recommended.png" alt="">
+						</figure>
+						<p class="calculator__recommended-item-text">Программируемый  терморегулятор SET-11 <br>(3 354 руб.)</p>
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
+
 
 	<footer class="footer">
 		<div class="container">
@@ -367,6 +457,7 @@
 					</form>
 				</div>
 			</div>
+			<button type="button" class="footer__scrolltop"></button>
 		</div>
 	</footer>
 

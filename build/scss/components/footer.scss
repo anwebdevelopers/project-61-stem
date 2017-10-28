@@ -1,5 +1,5 @@
 .footer {
-    padding: 4rem 0 6rem 0;
+    padding: 4rem 0 7rem 0;
     background-color: darken($red, 15%);
     color: rgba(255, 255, 255, .5);
 }
@@ -185,6 +185,44 @@
         		color: $yellow;
         	}
         }
+    }
+}
+.footer__scrolltop {
+    @include btn;
+    position: fixed;
+    z-index: 99999999;
+    right: 1rem;
+    bottom: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: .2rem solid #af0827;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    visibility: hidden;
+    opacity: 0;
+    &:hover, &:active {
+        border-color: $yellow;
+        &:before {
+            border-color: $yellow;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 1.8rem;
+        height: 1.8rem;
+        border-left: .2rem solid #af0827;
+        border-top: .2rem solid #af0827;
+        transition: all .5s ease;
+    }
+    &.footer__scrolltop_visible {
+        visibility: visible;
+        opacity: 1;
     }
 }
 

@@ -76,7 +76,13 @@ $(function() {
 
     var images = Array();
     $('.product__gallery').find('.product__gallery-item').each(function() {
-        images.push($(this).html());
+        var i = $(this).index();
+        if ( $(this).find('img').length ) {
+            // images.push($(this).html());
+            images[i] = $(this).html();
+        } else if ( $(this).find('iframe').length ) {
+            images[i] = '<img src="" alt="brjyrf">';
+        }
     }).end().addClass('owl-carousel').owlCarousel({
         items: 1,
         loop: true,
@@ -84,6 +90,7 @@ $(function() {
         autoplay: true,
         autoplayTimeout: 5000,
         smartSpeed: 500,
+        video: true,
         onInitialized: function() {
             $('.product__gallery .owl-dot').each(function() {
                 $(this).html(images[$(this).index()]);
@@ -130,9 +137,9 @@ $(function() {
         });
     });
 
-    //-----------------------------------------------
+    //*****************************************************//
     //popup
-    //-----------------------------------------------
+    //*****************************************************//
 
     $('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
@@ -145,6 +152,49 @@ $(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
 	});
+
+    //*****************************************************//
+    //calculator switch
+    //*****************************************************//
+
+    $('.calculator__form-switch-item').on('click', function() {
+        if ($(this).find('input:not(:checked)').length) {
+            $('.calculator__form-type-tab').eq($(this).closest('.calculator__form-switch-item').index()).slideDown(200).siblings('.calculator__form-type-tab').slideUp(200);
+        }
+    });
+    $('.calculator__form-type-tab').eq($('.calculator__form-switch-item input:not(:checked)').closest('.calculator__form-switch-item').index()).hide();
+
+    //*****************************************************//
+    //calculator number
+    //*****************************************************//
+    $('.quantity').append('<button class="plus" type="button"></button><button class="minus" type="button"></button>').on('click', 'button.plus, button.minus', function() {
+        var $this = $(this),
+        value = Number($this.siblings('input').val().replace(/[^-0-9]/gim, ""));
+        if( $this.hasClass('plus') ) {
+            $this.siblings('input').val( value + 1 );
+        } else if ( $this.hasClass('minus') && value > 1) {
+            $this.siblings('input').val( value + (-1) );
+        }
+    }).on('change', 'input', function() {
+        var $this = $(this);
+        if ( $this.val() < 1 || !Number($this.val())) {
+            $this.val(1);
+        }
+    });
+
+    //*****************************************************//
+    //scrolltop
+    //*****************************************************//
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() >= 1000) {
+             $('.footer__scrolltop').addClass('footer__scrolltop_visible');
+        } else  {
+            $('.footer__scrolltop').removeClass('footer__scrolltop_visible');
+        }
+    });
+    $('.footer__scrolltop').on('click', function() {
+        $('html, body').animate({scrollTop: 0 }, ( $(window).scrollTop() * 0.5 ), 'swing');
+    });
 
     //*****************************************************//
     // Google Map
